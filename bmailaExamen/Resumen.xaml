@@ -9,25 +9,26 @@
             <Label Text="VENTANA DE REGISTRO" FontSize="20" HorizontalTextAlignment="Center"/>
             <Label x:Name="lblUsuario" HorizontalTextAlignment="End" FontSize="16"/>
             <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Label Text="Nombre" FontSize="18" Grid.Row="0" Grid.Column="0"/>
-
-                <Entry x:Name="Nombre" Placeholder="Nombre" IsEnabled="False" Grid.Row="0" Grid.Column="1" />
-
-                    <Label Text="Total" FontSize="18" Grid.Row="1" Grid.Column="0"/>
-
-                    <Entry x:Name="txtResultadoT" Placeholder="Total" IsEnabled="False" Grid.Row="1" Grid.Column="1" />
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Nombre" Grid.Row="0" Grid.Column="0"/>
+                    <Entry x:Name="txtNombre"  Grid.Row="0" Grid.Column="1"/>
+                    <Label Text="Total" Grid.Row="1" Grid.Column="0"/>
+                    <Entry x:Name="txtTotal"  Keyboard="Numeric" Grid.Row="1" Grid.Column="1"/>
 
                 </Grid>
-        </StackLayout>
+
+                <Button x:Name="btnAcercade" Text="Acerca de" Clicked="btnAcercade_Clicked"/>
+
+            </StackLayout>
        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

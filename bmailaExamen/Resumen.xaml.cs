@@ -12,9 +12,19 @@ namespace bmailaExamen
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Resumen : ContentPage
     {
-        public Resumen( )
+        public Resumen(string usuario, string nombre, string total)
         {
-            
+            InitializeComponent();
+            lblUsuario.Text = usuario;
+            txtNombre.Text = nombre;
+            txtTotal.Text = total;
+        }
+
+
+        private void btnAcercade_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("App Realizado por ", "Byron Maila 9no A", "ACEPTAR");
+
         }
     }
 }
