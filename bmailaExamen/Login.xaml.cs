@@ -19,8 +19,8 @@ namespace bmailaExamen
 
         private void btnIniciar_Clicked(object sender, EventArgs e)
         {
-            string usuario = "12";
-            string contraseña = "12";
+            string usuario = "estudiante2023";
+            string contraseña = "uisrael2023";
             if (usuario == txtUsuario.Text && contraseña == txtContraseña.Text)
             {
                 Navigation.PushAsync(new Registro(usuario));

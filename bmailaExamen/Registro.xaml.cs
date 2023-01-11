@@ -25,11 +25,28 @@ namespace bmailaExamen
 
         {
             Navigation.PushAsync(new Resumen(lblUsuario.Text, txtNombre.Text, txtPagoT.Text));
+            DisplayAlert("felicidades ", "se guardo con exito", "ACEPTAR");
 
         }
 
         private void btnCalcular_Clicked(object sender, EventArgs e)
         {
+            try
+            {
+                if (Convert.ToDouble(txtMonto.Text) < 1)
+                {
+                    DisplayAlert("Error", "ingrese un monto mayor  a 1", "cerrar");
+                }
+                if (Convert.ToDouble(txtMonto.Text) > 3999)
+                {
+                    DisplayAlert("Error", "ingrese un monto menor  a 4000", "cerrar");
+                }
+            }
+            catch (Exception )
+            {
+
+                throw;
+            }
             try
             {
                 double montoInicial = Convert.ToDouble(txtMonto.Text);
@@ -50,22 +67,7 @@ namespace bmailaExamen
 
         private void txtMonto_TextChanged(object sender, TextChangedEventArgs e)
         {
-            try
-            {
-                if (Convert.ToDouble(txtMonto.Text) <1)
-                {
-                    DisplayAlert("Error", "ingrese un monto mayor  o igual a 1", "cerrar");
-                }
-                if(Convert.ToDouble(txtMonto.Text) >4000)
-                {
-                    DisplayAlert("Error", "ingrese un monto menor o igual a 4000", "cerrar");
-                }
-            }
-            catch (Exception ex)
-            {
-
-                throw;
-            }
+          
 
         }
     }
